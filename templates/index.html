@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countdown Timer</title>
+    <style>
+         
+         body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab); /* smooth dark premium gradient */
+    color: #f0f0f0;
+    text-align: center;
+    padding-top: 100px;
+    margin: 0;
+}
+
+     
+        .timer {
+            font-size: 2em;
+        }
+
+    button {
+        background-color: #1a1b1a; /* Green background */
+        color: white;
+        padding: 12px 28px;
+        font-size: 1.1em;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;  /* Rounded corners */
+        cursor: pointer;
+    }
+
+   
+</style>
+</head>
+
+<body style="
+    background-image: url('{{ url_for('static', filename='images/Screenshot_2025-05-10_13-56-00.png') }}');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+">
+
+<body>
+    <h1>YOUR HAPPINESS starts in</h1>
+    <div class="timer">
+        {{ days }} days, {{ hours }} hours, {{ minutes }} minutes 
+    </div>
+    <form method="get" action="/">
+        <button type="submit">Refresh</button>
+
+        
+    </form>
+    
+</body>
+</html>
