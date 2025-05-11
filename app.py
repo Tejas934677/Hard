@@ -1,5 +1,9 @@
 from flask import Flask, render_template
 from datetime import datetime
+import os
+
+api_key = os.getenv("MY_API_KEY")
+
 
 app = Flask(__name__)
 
